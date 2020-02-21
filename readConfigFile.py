@@ -57,6 +57,12 @@ def readConfigFile(filename, searchTag, sFunc=""):
                             if sFunc == "stringout":
                                 configField = configField.strip("\"")
 
+                            if sFunc == "int":
+                                configField = int(configField)
+
+                            if sFunc == "float":
+                                configField = float(configField)
+
                         filestream.close()
                         return configField
 
